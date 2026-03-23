@@ -1,281 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crucial Online Sales</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crucial Online Sales</title>
+    <link rel="stylesheet" href="styles.css">
 
 </head>
+
 <body>
 
-<header>
-    <img src="images/logo.jpg" alt="Logo">
-    <h1>CRUCIAL ONLINE SALES</h1>
-    <div class="profile-container">
-        <a href="settings.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" 
-                 alt="Profile" 
-                 class="profile-icon">
-        </a>
-    </div>
-</header>
-
-<nav>
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="about us.html">About Us</a>
-        <a href="products.html">Products</a>
-        <a href="contact us.html">Contact Us</a>
-    </div>
-    <!-- Cart Icon -->
-    <div id="cartIconContainer" class="cart-icon-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-        <span id="cartBadge">0</span>
-    </div>
-</nav>
-
-<!-- Mobile Menu Overlay -->
-<div class="menu-overlay" id="menuOverlay"></div>
-
-<div class="marquee-container">
-    <div class="marquee">
-        <div class="marquee-content">
-            ✷	 New arrivals every week! &nbsp;&nbsp;&nbsp; 
-	    ✷	100% customer satisfaction guaranteed!
-            ✷	We are hiring digital marketers, kindly submit your application on our email before December 31st 2025 &nbsp;&nbsp;&nbsp; 
-            ✷	Crucial online sales, the only shop with discounts! 
-            
-          </div>
-        <div class="marquee-content">
-            ✷ 	New arrivals every week! &nbsp;&nbsp;&nbsp; 
-	    ✷ 	100% customer satisfaction guaranteed!
-            ✷ 	We are hiring digital marketers, kindly submit your application on our email before December 31st 2025 &nbsp;&nbsp;&nbsp; 
-            ✷	Crucial online sales, the only shop with discounts!
+    <header>
+        <img src="images/logo.jpg" alt="Logo">
+        <h1>CRUCIAL ONLINE SALES</h1>
+        <div class="profile-container">
+            <a href="settings.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" class="profile-icon">
+            </a>
         </div>
-    </div>
-</div>
+    </header>
 
-
-
-<div class="banner"></div>
-
-<!-- Search Bar -->
-<div class="section">
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search for products...">
-        <button id="searchBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-            </svg>
-        </button>
-    </div>
-</div>
-
-<div class="section">
-    <h2>Featured Products</h2>
-    <div class="grid">
-        <div id="hisense-65-inch-smart-4k-hdr-tv-65a61g" class="card" data-name="Hisense 65 Inch Smart 4K HDR TV 65A61G" data-price="60000" data-image="images/hisense.jpg">
-            <img src="images/hisense.jpg" alt="Featured 1">
-            <p><b>Hisense 65 Inch Smart 4K HDR TV 65A61G</b></p>
-            <p><b>KSH 60,000</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
+    <nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div id="wireless-controller-for-playstation-5" class="card" data-name="Wireless Controller for PlayStation 5" data-price="9800" data-image="images/ps5 controller.jpg">
-            <img src="images/ps5 controller.jpg" alt="Featured 2">
-            <p><b>Wireless Controller for PlayStation 5</b></p>
-            <p><b>KSH 9,800</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="headphones" class="card" data-name="Headphones" data-price="2500" data-image="images/headphones.jpg">
-            <img src="images/headphones.jpg" alt="Featured 3">
-            <p><b>Headphones</b></p>
-            <p><b>KSH 2,500</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="home-theater-speaker-system" class="card" data-name="Home Theater Speaker System" data-price="20000" data-image="images/speaker.jpg">
-            <img src="images/speaker.jpg" alt="Featured 4">
-            <p><b>Home Theater Speaker System</b></p>
-            <p><b>KSH 20,000</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="apple-iphone-17-pro" class="card" data-name="Apple iPhone 17 Pro" data-price="235000" data-image="images/iphone17.jpg">
-            <img src="images/iphone17.jpg" alt="Featured 5">
-            <p><b>Apple iPhone 17 Pro</b></p>
-            <p><b>KSH 235,000</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="hp-victus-gaming-laptop-amd-ryzen-7-512gb" class="card" data-name="HP Victus Gaming Laptop AMD Ryzen 7 512GB" data-price="115000" data-image="images/laptop.jpg">
-            <img src="images/laptop.jpg" alt="Featured 6">
-            <p><b>HP Victus Gaming Laptop AMD Ryzen 7 512GB</b></p>
-            <p><b>KSH 115,000</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-    </div>
-</div>
-
-<div class="section">
-    <h2>New Arrivals</h2>
-    <div class="grid">
-        <div id="sumsung-galaxy-s25-ultra-512gb" class="card" data-name="Samsung Galaxy S25 Ultra 512GB" data-price="150000" data-image="images/s25.jpg">
-            <img src="images/s25.jpg">
-            <p><b>Samsung Galaxy S25 Ultra 512GB</b></p>
-            <p><b>KSH 150,000</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="womens-purses-and-handbags-shoulder-bags" class="card" data-name="Womens Purses and Handbags Shoulder Bags" data-price="12000" data-image="images/handbag.jpg">
-            <img src="images/handbag.jpg">
-            <p><b>Womens Purses and Handbags Shoulder Bags</b></p>
-            <p><b>KSH 12,000</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="women-8cm-high-heels-side-hollow-pumps" class="card" data-name="Women 8cm High Heels Side Hollow Pumps" data-price="3500" data-image="images/heels.jpg">
-            <img src="images/heels.jpg">
-            <p><b>Women 8cm High Heels Side Hollow Pumps</b></p>
-            <p><b>KSH 3,500</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="premier-50l-single-door-fridge" class="card" data-name="Premier 50L Single Door Fridge" data-price="20000" data-image="images/fridge.jpg">
-            <img src="images/fridge.jpg">
-            <p><b>Premier 50L Single Door Fridge</b></p>
-            <p><b>KSH 20,000</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="led-light-classic-tv-stand" class="card" data-name="LED Light Classic TV Stand" data-price="15000" data-image="images/stand.jpg">
-            <img src="images/stand.jpg">
-            <p><b>LED Light Classic TV Stand</b></p>
-            <p><b>KSH 15,000</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="mika-standing-cooker-50cm-x-60cm" class="card" data-name="MIKA Standing Cooker 50cm x 60cm" data-price="25000" data-image="images/cooker.jpg">
-            <img src="images/cooker.jpg">
-            <p><b>MIKA Standing Cooker 50cm x 60cm</b></p>
-            <p><b>KSH 25,000</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-    </div>
-</div>
-
-<div class="section">
-    <h2>You May Also Like</h2>
-    <div class="grid">
-        <div id="air-jordan-j4-black-sneakers" class="card" data-name="Air Jordan J4 Black Sneakers" data-price="4500" data-image="images/sneaker.jpg">
-            <img src="images/sneaker.jpg">
-            <p><b>Air Jordan J4 Black Sneakers</b></p>
-            <p><b>KSH 4,500</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="premier-4-5-litres-electric-kettle" class="card" data-name="Premier 4.5 Litres Electric Kettle" data-price="4250" data-image="images/kettle.jpg">
-            <img src="images/kettle.jpg">
-            <p><b>Premier 4.5 Litres Electric Kettle</b></p>
-            <p><b>KSH 4,250</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="acefast-wireless-bluetooth-earbuds" class="card" data-name="ACEFAST Wireless Bluetooth Earbuds" data-price="7500" data-image="images/pods.jpg">
-            <img src="images/pods.jpg">
-            <p><b>ACEFAST Wireless Bluetooth Earbuds</b></p>
-            <p><b>KSH 7,500</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="redmi-note-14-4g-8gb-ram-256gb" class="card" data-name="Redmi Note 14 4G 8GB RAM 256GB" data-price="23500" data-image="images/note14.jpg">
-            <img src="images/note14.jpg">
-            <p><b>Redmi Note 14 4G 8GB RAM 256GB</b></p>
-            <p><b>KSH 23,500</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="aliyons-2-1ch-woofer-speaker-elp2501" class="card" data-name="Aliyons 2.1CH Woofer Speaker ELP2501" data-price="4700" data-image="images/woofer.jpg">
-            <img src="images/woofer.jpg">
-            <p><b>Aliyons 2.1CH Woofer Speaker ELP2501</b></p>
-            <p><b>KSH 4,700</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-        <div id="progas-6kg-complete-cylinder-grill-burner" class="card" data-name="Progas 6kg Complete (Cylinder + Grill + Burner)" data-price="5500" data-image="images/gas.jpg">
-            <img src="images/gas.jpg">
-            <p><b>Progas 6kg Complete (Cylinder + Grill + Burner)</b></p>
-            <p><b>KSH 5,500</b></p>
-            <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-    </div>
-</div>
-
-
-<div class="section">
-    <h2>Ads & Quick Links</h2>
-    <div class="ads-box">
-       
-	<p><b>SPONSERED ADVERTISEMENT</b></p>
-	<br>
-	<h1><b>Why Estevao could become Chelsea's most important attacker</b></h1>
-	<a href="https://www.premierleague.com/en/news/4462052/why-brazil-winger-estevao-could-become-most-important-attacker-for-chelsea">
-   	<P><img src="https://resources.premierleague.pulselive.com/photo-resources/2025/11/14/6394294e-0870-49d1-abec-96abc12cfdff/PL2526-TALKING-TACTICS-CHE-MW12.png?width=1368" style="width:100%;"></p>"
-	</a>
-
-        <hr>
-<h3>Quick Links</h3>
-
-<div class="ads-box-layout">
-
-    <!-- LEFT SIDE: Buttons -->
-    <div class="ads-buttons">
-
-        <a href="products.html">Products</a>
-        <a href="about us.html">About Us</a>
-        <a href="contact us.html">Contact Us</a>
-
-        <br><br>
-
-        <p><b>SOCIAL MEDIA</b></p>
-        <a href="https://www.facebook.com/profile.php?id=100070575562114#">Facebook</a>
-        <a href="https://www.instagram.com/crucial_ke254/">Instagram</a>
-        <a href="https://ke.linkedin.com/in/kelvin-kahari-karuga">LinkedIn</a>
-        <a href="https://www.tiktok.com/@the.vibe790">Tiktok</a>
-
-    </div>
-
-    <!-- RIGHT SIDE: Sidebar -->
-    <div class="ads-sidebar">
-        <h4>Important</h4>
-        <a href="delivery-policy.html">Delivery Policy</a>
-        <a href="terms-conditions.html">Terms & Conditions</a>
-        <a href="return-policy.html">Return Policy</a>
-        <a href="faqs.html">FAQs</a>
-    </div>
-
-</div>
-
-</div>
-</div>
-
-<footer>
-    &copy; 2025 crucial online sales website. All rights reserved.
-</footer>
-
-<script src="script.js"></script>
-
-<!-- Cart Modal -->
-<div id="cartModalOverlay" class="cart-modal-overlay">
-    <div class="cart-modal">
-        <div class="cart-modal-header">
-            <h2>Your Cart</h2>
-            <button id="closeCartModal" class="close-btn">&times;</button>
-        </div>
-        <div id="cartModalContent" class="cart-modal-content">
-            <!-- Cart items will be injected here by JS -->
-        </div>
-        <div class="cart-modal-footer">
-            <div class="total-section">
-                <strong>Total:</strong> <span id="cartModalTotal">KSH 0</span>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about us.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="contact us.html">Contact Us</a>
+            <!-- Search Bar inline -->
+            <div class="nav-search-inline">
+                <input type="text" id="navSearchInput" placeholder="Search...">
+                <button id="navSearchBtn" type="button" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
             </div>
-            <a href="checkout.html" id="checkoutBtn" class="btn">Proceed to Checkout</a>
+        </div>
+        <!-- Cart Icon -->
+        <div id="cartIconContainer" class="cart-icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span id="cartBadge">0</span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="marquee-container">
+        <div class="marquee">
+            <div class="marquee-content">
+                ✷ New arrivals every week! &nbsp;&nbsp;&nbsp;
+                ✷ 100% customer satisfaction guaranteed!
+                ✷ We are hiring digital marketers, kindly submit your application on our email before December 31st 2025
+                &nbsp;&nbsp;&nbsp;
+                ✷ Crucial online sales, the only shop with discounts!
+
+            </div>
+            <div class="marquee-content">
+                ✷ New arrivals every week! &nbsp;&nbsp;&nbsp;
+                ✷ 100% customer satisfaction guaranteed!
+                ✷ We are hiring digital marketers, kindly submit your application on our email before December 31st 2025
+                &nbsp;&nbsp;&nbsp;
+                ✷ Crucial online sales, the only shop with discounts!
+            </div>
         </div>
     </div>
-</div>
+
+
+
+    <div class="banner"></div>
+
+    <div class="section">
+        <h2>Featured Products</h2>
+        <div class="grid">
+            <div id="hisense-65-inch-smart-4k-hdr-tv-65a61g" class="card"
+                data-name="Hisense 65 Inch Smart 4K HDR TV 65A61G" data-price="60000" data-image="images/hisense.jpg">
+                <img src="images/hisense.jpg" alt="Featured 1">
+                <p><b>Hisense 65 Inch Smart 4K HDR TV 65A61G</b></p>
+                <p><b>KSH 60,000</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="wireless-controller-for-playstation-5" class="card"
+                data-name="Wireless Controller for PlayStation 5" data-price="9800"
+                data-image="images/ps5 controller.jpg">
+                <img src="images/ps5 controller.jpg" alt="Featured 2">
+                <p><b>Wireless Controller for PlayStation 5</b></p>
+                <p><b>KSH 9,800</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="headphones" class="card" data-name="Headphones" data-price="2500"
+                data-image="images/headphones.jpg">
+                <img src="images/headphones.jpg" alt="Featured 3">
+                <p><b>Headphones</b></p>
+                <p><b>KSH 2,500</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="home-theater-speaker-system" class="card" data-name="Home Theater Speaker System"
+                data-price="20000" data-image="images/speaker.jpg">
+                <img src="images/speaker.jpg" alt="Featured 4">
+                <p><b>Home Theater Speaker System</b></p>
+                <p><b>KSH 20,000</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="apple-iphone-17-pro" class="card" data-name="Apple iPhone 17 Pro" data-price="235000"
+                data-image="images/iphone17.jpg">
+                <img src="images/iphone17.jpg" alt="Featured 5">
+                <p><b>Apple iPhone 17 Pro</b></p>
+                <p><b>KSH 235,000</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="hp-victus-gaming-laptop-amd-ryzen-7-512gb" class="card"
+                data-name="HP Victus Gaming Laptop AMD Ryzen 7 512GB" data-price="115000"
+                data-image="images/laptop.jpg">
+                <img src="images/laptop.jpg" alt="Featured 6">
+                <p><b>HP Victus Gaming Laptop AMD Ryzen 7 512GB</b></p>
+                <p><b>KSH 115,000</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>New Arrivals</h2>
+        <div class="grid">
+            <div id="sumsung-galaxy-s25-ultra-512gb" class="card" data-name="Samsung Galaxy S25 Ultra 512GB"
+                data-price="150000" data-image="images/s25.jpg">
+                <img src="images/s25.jpg">
+                <p><b>Samsung Galaxy S25 Ultra 512GB</b></p>
+                <p><b>KSH 150,000</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="womens-purses-and-handbags-shoulder-bags" class="card"
+                data-name="Womens Purses and Handbags Shoulder Bags" data-price="12000" data-image="images/handbag.jpg">
+                <img src="images/handbag.jpg">
+                <p><b>Womens Purses and Handbags Shoulder Bags</b></p>
+                <p><b>KSH 12,000</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="women-8cm-high-heels-side-hollow-pumps" class="card"
+                data-name="Women 8cm High Heels Side Hollow Pumps" data-price="3500" data-image="images/heels.jpg">
+                <img src="images/heels.jpg">
+                <p><b>Women 8cm High Heels Side Hollow Pumps</b></p>
+                <p><b>KSH 3,500</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="premier-50l-single-door-fridge" class="card" data-name="Premier 50L Single Door Fridge"
+                data-price="20000" data-image="images/fridge.jpg">
+                <img src="images/fridge.jpg">
+                <p><b>Premier 50L Single Door Fridge</b></p>
+                <p><b>KSH 20,000</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="led-light-classic-tv-stand" class="card" data-name="LED Light Classic TV Stand" data-price="15000"
+                data-image="images/stand.jpg">
+                <img src="images/stand.jpg">
+                <p><b>LED Light Classic TV Stand</b></p>
+                <p><b>KSH 15,000</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="mika-standing-cooker-50cm-x-60cm" class="card" data-name="MIKA Standing Cooker 50cm x 60cm"
+                data-price="25000" data-image="images/cooker.jpg">
+                <img src="images/cooker.jpg">
+                <p><b>MIKA Standing Cooker 50cm x 60cm</b></p>
+                <p><b>KSH 25,000</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>You May Also Like</h2>
+        <div class="grid">
+            <div id="air-jordan-j4-black-sneakers" class="card" data-name="Air Jordan J4 Black Sneakers"
+                data-price="4500" data-image="images/sneaker.jpg">
+                <img src="images/sneaker.jpg">
+                <p><b>Air Jordan J4 Black Sneakers</b></p>
+                <p><b>KSH 4,500</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="premier-4-5-litres-electric-kettle" class="card" data-name="Premier 4.5 Litres Electric Kettle"
+                data-price="4250" data-image="images/kettle.jpg">
+                <img src="images/kettle.jpg">
+                <p><b>Premier 4.5 Litres Electric Kettle</b></p>
+                <p><b>KSH 4,250</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="acefast-wireless-bluetooth-earbuds" class="card" data-name="ACEFAST Wireless Bluetooth Earbuds"
+                data-price="7500" data-image="images/pods.jpg">
+                <img src="images/pods.jpg">
+                <p><b>ACEFAST Wireless Bluetooth Earbuds</b></p>
+                <p><b>KSH 7,500</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="redmi-note-14-4g-8gb-ram-256gb" class="card" data-name="Redmi Note 14 4G 8GB RAM 256GB"
+                data-price="23500" data-image="images/note14.jpg">
+                <img src="images/note14.jpg">
+                <p><b>Redmi Note 14 4G 8GB RAM 256GB</b></p>
+                <p><b>KSH 23,500</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="aliyons-2-1ch-woofer-speaker-elp2501" class="card" data-name="Aliyons 2.1CH Woofer Speaker ELP2501"
+                data-price="4700" data-image="images/woofer.jpg">
+                <img src="images/woofer.jpg">
+                <p><b>Aliyons 2.1CH Woofer Speaker ELP2501</b></p>
+                <p><b>KSH 4,700</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div id="progas-6kg-complete-cylinder-grill-burner" class="card"
+                data-name="Progas 6kg Complete (Cylinder + Grill + Burner)" data-price="5500"
+                data-image="images/gas.jpg">
+                <img src="images/gas.jpg">
+                <p><b>Progas 6kg Complete (Cylinder + Grill + Burner)</b></p>
+                <p><b>KSH 5,500</b></p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <h2>Ads & Quick Links</h2>
+        <div class="ads-box">
+
+            <p><b>SPONSERED ADVERTISEMENT</b></p>
+            <br>
+            <h1><b>Why Estevao could become Chelsea's most important attacker</b></h1>
+            <a
+                href="https://www.premierleague.com/en/news/4462052/why-brazil-winger-estevao-could-become-most-important-attacker-for-chelsea">
+                <P><img src="https://resources.premierleague.pulselive.com/photo-resources/2025/11/14/6394294e-0870-49d1-abec-96abc12cfdff/PL2526-TALKING-TACTICS-CHE-MW12.png?width=1368"
+                        style="width:100%;"></p>"
+            </a>
+
+            <hr>
+            <h3>Quick Links</h3>
+
+            <div class="ads-box-layout">
+
+                <!-- LEFT SIDE: Buttons -->
+                <div class="ads-buttons">
+
+                    <a href="products.html">Products</a>
+                    <a href="about us.html">About Us</a>
+                    <a href="contact us.html">Contact Us</a>
+
+                    <br><br>
+
+                    <p><b>SOCIAL MEDIA</b></p>
+                    <a href="https://www.facebook.com/profile.php?id=100070575562114#">Facebook</a>
+                    <a href="https://www.instagram.com/crucial_ke254/">Instagram</a>
+                    <a href="https://ke.linkedin.com/in/kelvin-kahari-karuga">LinkedIn</a>
+                    <a href="https://www.tiktok.com/@the.vibe790">Tiktok</a>
+
+                </div>
+
+                <!-- RIGHT SIDE: Sidebar -->
+                <div class="ads-sidebar">
+                    <h4>Important</h4>
+                    <a href="delivery-policy.html">Delivery Policy</a>
+                    <a href="terms-conditions.html">Terms & Conditions</a>
+                    <a href="return-policy.html">Return Policy</a>
+                    <a href="faqs.html">FAQs</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 crucial online sales website. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Cart Modal -->
+    <div id="cartModalOverlay" class="cart-modal-overlay">
+        <div class="cart-modal">
+            <div class="cart-modal-header">
+                <h2>Your Cart</h2>
+                <button id="closeCartModal" class="close-btn">&times;</button>
+            </div>
+            <div id="cartModalContent" class="cart-modal-content">
+                <!-- Cart items will be injected here by JS -->
+            </div>
+            <div class="cart-modal-footer">
+                <div class="total-section">
+                    <strong>Total:</strong> <span id="cartModalTotal">KSH 0</span>
+                </div>
+                <a href="checkout.html" id="checkoutBtn" class="btn">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
 
 </body>
+
 </html>

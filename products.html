@@ -24,15 +24,34 @@
 
 <!-- Navigation -->
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about us.html">About Us</a>
-    <a href="products.html">Products</a>
-    <a href="contact us.html">Contact Us</a>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about us.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="contact us.html">Contact Us</a>
+        <!-- Search Bar inline -->
+        <div class="nav-search-inline">
+            <input type="text" id="navSearchInput" placeholder="Search...">
+            <button id="navSearchBtn" type="button" title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
     <div id="cartIconContainer" class="cart-icon-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
         <span id="cartBadge">0</span>
     </div>
 </nav>
+
+<div class="menu-overlay" id="menuOverlay"></div>
 
 <!-- Page Heading -->
 <div class="page-header">
@@ -52,130 +71,130 @@
 <!-- All Products -->
 <div id="all" class="category-section active product-grid">
 
-    <div class="product-card">
+    <div class="product-card" data-name="Hisense 65 Smart TV" data-price="60000" data-image="images/hisense.jpg">
         <img src="images/hisense.jpg">
         <p><b>Hisense 65” Smart TV</b></p>
         <p>KSH 60,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="iPhone 17 Pro" data-price="235000" data-image="images/iphone17.jpg">
         <img src="images/iphone17.jpg">
         <p><b>iPhone 17 Pro</b></p>
         <p>KSH 235,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Samsung S25 Ultra" data-price="150000" data-image="images/s25.jpg">
         <img src="images/s25.jpg">
         <p><b>Samsung S25 Ultra</b></p>
         <p>KSH 150,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Headphones" data-price="2500" data-image="images/headphones.jpg">
         <img src="images/headphones.jpg">
         <p><b>Headphones</b></p>
         <p>KSH 2,500</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Womens Handbag" data-price="1200" data-image="images/handbag.jpg">
         <img src="images/handbag.jpg">
         <p><b>Women’s Handbag</b></p>
         <p>KSH 1,200</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="MIKA Standing Cooker" data-price="30000" data-image="images/cooker.jpg">
         <img src="images/cooker.jpg">
         <p><b>MIKA Standing Cooker, 50cm x 60cm</b></p>
         <p>KSH 30,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Electric Kettle" data-price="4250" data-image="images/kettle.jpg">
         <img src="images/kettle.jpg">
         <p><b>Electric Kettle</b></p>
         <p>KSH 4,250</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Premier 50L Single Door Fridge" data-price="20250" data-image="images/fridge.jpg">
         <img src="images/fridge.jpg">
         <p><b>Premier 50L Single Door Fridge</b></p>
         <p>KSH 20,250</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Progas 6kg Complete" data-price="5500" data-image="images/gas.jpg">
         <img src="images/gas.jpg">
         <p><b>Progas 6kg Complete (Cylinder + Grill + Burner)</b></p>
         <p>KSH 5,500</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="ACEFAST Wireless Bluetooth Earbuds" data-price="7500" data-image="images/pods.jpg">
         <img src="images/pods.jpg">
         <p><b>ACEFAST Wireless Bluetooth Earbuds</b></p>
         <p>KSH 7,500</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Women High Heels" data-price="3500" data-image="images/heels.jpg">
         <img src="images/heels.jpg">
         <p><b>Women High Heels</b></p>
         <p>KSH 3,500</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Home Theater Speaker" data-price="20000" data-image="images/speaker.jpg">
         <img src="images/speaker.jpg">
         <p><b>Home Theater Speaker</b></p>
         <p>KSH 20,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Redmi Note 14 4G" data-price="23500" data-image="images/note14.jpg">
         <img src="images/note14.jpg">
         <p><b>Redmi Note 14 4G 8GB RAM 256GB</b></p>
         <p>KSH 23,500</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="HP Victus Gaming Laptop" data-price="115000" data-image="images/laptop.jpg">
         <img src="images/laptop.jpg">
         <p><b>HP Victus Gaming Laptop</b></p>
         <p>KSH 115,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Air Jordan Sneakers" data-price="4500" data-image="images/sneaker.jpg">
         <img src="images/sneaker.jpg">
         <p><b>Air Jordan Sneakers</b></p>
         <p>KSH 4,500</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="LED Light Classic TV Stand" data-price="15000" data-image="images/stand.jpg">
         <img src="images/stand.jpg">
         <p><b>Led light classic tv stand</b></p>
         <p>KSH 15,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Wireless Controller for PlayStation 5" data-price="9800" data-image="images/ps5 controller.jpg">
         <img src="images/ps5 controller.jpg">
         <p><b>Wireless Controller for PlayStation 5</b></p>
         <p>KSH 9,800</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Aliyons 2.1CH Woofer Speaker" data-price="4700" data-image="images/woofer.jpg">
         <img src="images/woofer.jpg">
         <p><b>Aliyons 2.1CH woofer speaker-ELP2501</b></p>
         <p>KSH 4,700</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
 </div>
@@ -183,60 +202,60 @@
 <!-- Electronics -->
 <div id="electronics" class="category-section product-grid">
 
-    <div class="product-card">
+    <div class="product-card" data-name="Home Theater Speaker" data-price="20000" data-image="images/speaker.jpg">
         <img src="images/speaker.jpg">
         <p><b>Home Theater Speaker</b></p>
         <p>KSH 20,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="ACEFAST Wireless Bluetooth Earbuds" data-price="7500" data-image="images/pods.jpg">
         <img src="images/pods.jpg">
         <p><b>ACEFAST Wireless Bluetooth Earbuds</b></p>
         <p>KSH 7,500</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="HP Victus Gaming Laptop" data-price="115000" data-image="images/laptop.jpg">
         <img src="images/laptop.jpg">
         <p><b>HP Victus Gaming Laptop</b></p>
         <p>KSH 115,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Hisense 65 Smart TV" data-price="60000" data-image="images/hisense.jpg">
         <img src="images/hisense.jpg">
         <p><b>Hisense 65” Smart TV</b></p>
         <p>KSH 60,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Headphones" data-price="2500" data-image="images/headphones.jpg">
         <img src="images/headphones.jpg">
         <p><b>Headphones</b></p>
         <p>KSH 2,500</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="LED Light Classic TV Stand" data-price="15000" data-image="images/stand.jpg">
         <img src="images/stand.jpg">
         <p><b>Led light classic tv stand</b></p>
         <p>KSH 15,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Wireless Controller for PlayStation 5" data-price="9800" data-image="images/ps5 controller.jpg">
         <img src="images/ps5 controller.jpg">
         <p><b>Wireless Controller for PlayStation 5</b></p>
         <p>KSH 9,800</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Aliyons 2.1CH Woofer Speaker" data-price="4700" data-image="images/woofer.jpg">
         <img src="images/woofer.jpg">
         <p><b>Aliyons 2.1CH woofer speaker-ELP2501</b></p>
         <p>KSH 4,700</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
 </div>
@@ -244,25 +263,25 @@
 <!-- Phones -->
 <div id="phones" class="category-section product-grid">
 
-    <div class="product-card">
+    <div class="product-card" data-name="iPhone 17 Pro" data-price="235000" data-image="images/iphone17.jpg">
         <img src="images/iphone17.jpg">
         <p><b>iPhone 17 Pro</b></p>
         <p>KSH 235,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Samsung S25 Ultra" data-price="150000" data-image="images/s25.jpg">
         <img src="images/s25.jpg">
         <p><b>Samsung S25 Ultra</b></p>
         <p>KSH 150,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Redmi Note 14 4G" data-price="23500" data-image="images/note14.jpg">
         <img src="images/note14.jpg">
         <p><b>Redmi Note 14 4G 8GB RAM 256GB</b></p>
         <p>KSH 23,500</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
 </div>
@@ -270,25 +289,25 @@
 <!-- Fashion -->
 <div id="fashion" class="category-section product-grid">
 
-    <div class="product-card">
+    <div class="product-card" data-name="Women High Heels" data-price="3500" data-image="images/heels.jpg">
         <img src="images/heels.jpg">
         <p><b>Women High Heels</b></p>
         <p>KSH 3,500</p>
-	<a class="buy-btn" href="checkout.html">Buy Now</a>
+	<button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Air Jordan Sneakers" data-price="4500" data-image="images/sneaker.jpg">
         <img src="images/sneaker.jpg">
         <p><b>Air Jordan Sneakers</b></p>
         <p>KSH 4,500</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Womens Handbag" data-price="1200" data-image="images/handbag.jpg">
         <img src="images/handbag.jpg">
         <p><b>Women’s Handbag</b></p>
         <p>KSH 12,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
 </div>
@@ -296,32 +315,32 @@
 <!-- Kitchen -->
 <div id="kitchen" class="category-section product-grid">
 
-    <div class="product-card">
+    <div class="product-card" data-name="Electric Kettle" data-price="4250" data-image="images/kettle.jpg">
         <img src="images/kettle.jpg">
         <p><b>Electric Kettle</b></p>
         <p>KSH 4,250</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="MIKA Standing Cooker" data-price="30000" data-image="images/cooker.jpg">
         <img src="images/cooker.jpg">
         <p><b>Mika Standing Cooker</b></p>
         <p>KSH 25,000</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Premier 50L Single Door Fridge" data-price="20250" data-image="images/fridge.jpg">
         <img src="images/fridge.jpg">
         <p><b>Premier 50L Single Door Fridge</b></p>
         <p>KSH 20,250</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-name="Progas 6kg Complete" data-price="5500" data-image="images/gas.jpg">
         <img src="images/gas.jpg">
         <p><b>Progas 6kg Complete (Cylinder + Grill + Burner)</b></p>
         <p>KSH 5,500</p>
-        <a class="buy-btn" href="checkout.html">Buy Now</a>
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 </div>
 

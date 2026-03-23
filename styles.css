@@ -1412,3 +1412,737 @@ footer {
 .toast.error {
     background: #ff5722;
 }
+
+/* ===========================
+   IMPROVED MOBILE RESPONSIVENESS
+=========================== */
+
+/* Mobile-first base styles */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 100px;
+    }
+
+    header {
+        padding: 8px 15px;
+    }
+
+    header h1 {
+        font-size: 1em;
+    }
+
+    header img {
+        height: 35px;
+    }
+
+    .profile-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    nav {
+        top: 55px;
+        padding: 10px 15px;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        width: 80%;
+        max-width: 280px;
+        height: calc(100vh - 100px);
+        background: #3949ab;
+        flex-direction: column;
+        padding: 20px;
+        transition: left 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        display: block;
+        margin: 8px 0;
+        padding: 12px 18px;
+        text-align: left;
+        font-size: 1em;
+    }
+
+    .cart-icon-container {
+        right: 15px;
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Banner mobile */
+    .banner {
+        height: 200px;
+    }
+
+    /* Section mobile */
+    .section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .section h2 {
+        font-size: 1.2em;
+    }
+
+    /* Grid mobile - 2 columns */
+    .grid,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .card,
+    .product-card {
+        padding: 8px;
+    }
+
+    .card img,
+    .product-card img {
+        height: 120px;
+    }
+
+    .card p,
+    .product-card p {
+        font-size: 0.85em;
+    }
+
+    .add-to-cart-btn {
+        padding: 6px 12px;
+        font-size: 0.8em;
+        margin-top: 8px;
+    }
+
+    /* Search bar mobile */
+    .search-container {
+        max-width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+    .search-container input {
+        padding: 10px 40px 10px 15px;
+        font-size: 0.95em;
+    }
+
+    .search-container button {
+        padding: 6px 12px;
+    }
+
+    /* Category tabs mobile */
+    .category-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .category-tabs button {
+        padding: 8px 12px;
+        font-size: 0.8em;
+        flex: 1;
+        min-width: 100px;
+        max-width: 150px;
+    }
+
+    /* Page header mobile */
+    .page-header {
+        padding: 20px 15px;
+    }
+
+    .page-header h1 {
+        font-size: 1.5em;
+    }
+
+    .page-header p {
+        font-size: 0.9em;
+    }
+
+    /* Container mobile */
+    .container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .info-section {
+        padding: 20px;
+    }
+
+    .info-section h2 {
+        font-size: 1.2em;
+    }
+
+    .info-section h3 {
+        font-size: 1em;
+    }
+
+    /* Cart modal mobile */
+    .cart-modal {
+        max-width: 100%;
+        max-height: 90vh;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .cart-item {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .cart-item-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .cart-item-details h4 {
+        font-size: 0.85em;
+    }
+
+    .cart-item-price {
+        font-size: 0.8em;
+    }
+
+    .qty-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 0.85em;
+    }
+
+    /* Footer mobile */
+    footer {
+        font-size: 0.85em;
+        padding: 15px;
+    }
+
+    /* Ads section mobile */
+    .ads-box-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .ads-buttons a {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .ads-sidebar {
+        margin-top: 15px;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+
+    .grid,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .card img,
+    .product-card img {
+        height: 100px;
+    }
+
+    .card p,
+    .product-card p {
+        font-size: 0.75em;
+    }
+
+    .add-to-cart-btn {
+        padding: 5px 10px;
+        font-size: 0.75em;
+    }
+
+    header h1 {
+        font-size: 0.85em;
+    }
+}
+
+/* Large mobile / small tablet */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .grid,
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* ===========================
+   FAQ PAGE STYLING
+=========================== */
+.faq-section {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.faq-section h2 {
+    color: #1a237e;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3949ab;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-section h2::before {
+    content: "Q&A";
+    background: #1a237e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.6em;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3949ab;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    background: #e8eaf6;
+    transform: translateX(5px);
+}
+
+.faq-item:last-child {
+    margin-bottom: 0;
+}
+
+.faq-item h3 {
+    color: #1a237e;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.faq-item h3::before {
+    content: "Q:";
+    background: #3949ab;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.faq-item p {
+    color: #444;
+    line-height: 1.7;
+    margin-left: 35px;
+    position: relative;
+}
+
+.faq-item p::before {
+    content: "A:";
+    color: #4caf50;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.faq-section:last-of-type {
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    color: white;
+}
+
+.faq-section:last-of-type h2 {
+    color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.faq-section:last-of-type h2::before {
+    background: white;
+    color: #1a237e;
+}
+
+.faq-section:last-of-type ul {
+    list-style: none;
+    padding: 0;
+}
+
+.faq-section:last-of-type li {
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+}
+
+.faq-section:last-of-type li::before {
+    content: "📞";
+    position: absolute;
+    left: 0;
+}
+
+.faq-section:last-of-type li:nth-child(2)::before {
+    content: "✉️";
+}
+
+.faq-section:last-of-type li:nth-child(3)::before {
+    content: "💬";
+}
+
+/* Mobile FAQ adjustments */
+@media screen and (max-width: 768px) {
+    .faq-section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .faq-section h2 {
+        font-size: 1.2em;
+    }
+
+    .faq-item {
+        padding: 12px;
+    }
+
+    .faq-item h3 {
+        font-size: 1em;
+    }
+
+    .faq-item p {
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 0.9em;
+    }
+}
+
+/* ===========================
+   NAV SEARCH ICON
+=========================== */
+.nav-search-icon {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a237e;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.nav-search-icon:hover {
+    background-color: #ffc107;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-search-icon svg {
+    display: block;
+}
+
+/* Search overlay that slides down */
+.nav-search-overlay {
+    display: none;
+    position: fixed;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    background: #1a237e;
+    padding: 15px 20px;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-search-overlay.active {
+    display: block;
+}
+
+.nav-search-overlay input {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    outline: none;
+}
+
+/* Mobile adjustments for nav search */
+@media screen and (max-width: 768px) {
+    .nav-search-icon {
+        left: 55px;
+        padding: 6px;
+    }
+
+    .nav-search-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .nav-search-overlay {
+        top: 100px;
+        padding: 10px 15px;
+    }
+}
+
+
+/* ===========================
+   CLICKABLE PRODUCT CARDS
+=========================== */
+.card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card:active {
+    transform: translateY(-2px);
+}
+
+/* Prevent click on Add to Cart button from triggering card click */
+.card .add-to-cart-btn {
+    position: relative;
+    z-index: 2;
+}
+
+/* Highlight effect for products page when coming from home */
+.product-card.highlight {
+    animation: highlightPulse 2s ease;
+}
+
+@keyframes highlightPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    50% {
+        box-shadow: 0 0 30px #ffc107, 0 0 60px #ffc107;
+    }
+}
+
+
+/* ===========================
+   CART ICON - IMPROVED CLICKABLE AREA
+=========================== */
+.cart-icon-container {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-icon-container:hover {
+    background-color: #ffc107;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.cart-icon-container:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Ensure cart modal displays properly */
+.cart-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-modal-overlay[style*="flex"] {
+    display: flex !important;
+}
+
+/* Cart modal content scrollable */
+.cart-modal-content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+/* Close button styling */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #666;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+
+/* ===========================
+   NAV SEARCH BAR - STATIC
+=========================== */
+.nav-search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 3px;
+    margin: 0 20px;
+    flex: 1;
+    max-width: 300px;
+}
+
+.nav-search-container input {
+    border: none;
+    background: transparent;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    outline: none;
+    flex: 1;
+    width: 100%;
+}
+
+.nav-search-container button {
+    background: #1a237e;
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-search-container button:hover {
+    background: #3949ab;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .nav-search-container {
+        max-width: 150px;
+        margin: 0 10px;
+    }
+
+    .nav-search-container input {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+}
+
+
+/* ===========================
+   INLINE NAV SEARCH BAR
+=========================== */
+.nav-search-inline {
+    display: inline-flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 2px 2px 2px 10px;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+.nav-search-inline input {
+    border: none;
+    background: transparent;
+    padding: 6px 8px;
+    font-size: 0.85em;
+    outline: none;
+    width: 120px;
+    color: #333;
+}
+
+.nav-search-inline input::placeholder {
+    color: #999;
+}
+
+.nav-search-inline button {
+    background: #1a237e;
+    color: white;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav-search-inline button:hover {
+    background: #3949ab;
+}
+
+/* Mobile: hide search in nav-links, show in mobile menu instead */
+@media screen and (max-width: 768px) {
+    .nav-search-inline {
+        display: none;
+    }
+
+    /* Show search in mobile menu */
+    .nav-links.active .nav-search-inline {
+        display: flex;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .nav-links.active .nav-search-inline input {
+        flex: 1;
+        width: auto;
+    }
+}
