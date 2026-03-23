@@ -27,6 +27,18 @@ const db = mysql.createConnection({
     database: 'ecommerce_db'
 });
 
+// API Route: Get All Products
+app.get('/api/products', (req, res) => {
+    const sql = "SELECT * FROM products";
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error("Database query error:", err);
+            return res.status(500).json({ error: "Failed to fetch products" });
+        }
+        res.json(results);
+    });
+});
+
 // 4. API Route: Process Order & Trigger Payment
 app.post('/api/process-order', async (req, res) => {
     const { name, phone, email, amount, product, address, quantity } = req.body;
