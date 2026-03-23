@@ -225,13 +225,42 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("shoppingCart", JSON.stringify(cart));
     }
 
-    // 1. Make all product cards on the homepage clickable
+    // 1. Handle "Add to Cart" clicks on homepage product cards
+    const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+    addToCartButtons.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const card = btn.closest(".card");
+            if (card) {
+                const name = card.dataset.name;
+                const price = parseInt(card.dataset.price);
+                const image = card.dataset.image;
+                if (name && price) {
+                    btn.classList.add("loading");
+                    btn.textContent = "Adding...";
+                    setTimeout(() => {
+                        const product = { name, price, image };
+                        addToCart(product);
+                        updateCartCount();
+                        showToast(`${name} added to cart!`);
+                        btn.classList.remove("loading");
+                        btn.textContent = "Add to Cart";
+                    }, 300);
+                }
+            }
+        });
+    });
+
+    // Allow clicking on card image to go to products page
     const productCards = document.querySelectorAll(".card");
     productCards.forEach(card => {
-        card.style.cursor = "pointer"; // indicate it's clickable
-        card.addEventListener("click", () => {
-            window.location.href = "products.html"; // open product page
-        });
+        const img = card.querySelector("img");
+        if (img) {
+            img.style.cursor = "pointer";
+            img.addEventListener("click", () => {
+                window.location.href = "products.html";
+            });
+        }
     });
 
     // 2. Make all links under "Important" sidebar open contact page
@@ -626,4 +655,116 @@ document.addEventListener("DOMContentLoaded", () => {
         showToast("Password Changed Successfully");
         document.getElementById("passwordForm").reset();
     };
+});
+
+
+/* ============================================
+   MOBILE HAMBURGER MENU
+===============================================*/
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    const menuOverlay = document.getElementById("menuOverlay");
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            if (menuOverlay) menuOverlay.classList.toggle("active");
+            document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
+        });
+
+        if (menuOverlay) {
+            menuOverlay.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                menuOverlay.classList.remove("active");
+                document.body.style.overflow = "auto";
+            });
+        }
+
+        navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                if (menuOverlay) menuOverlay.classList.remove("active");
+                document.body.style.overflow = "auto";
+            });
+        });
+    }
+});
+
+/* ============================================
+   SEARCH FUNCTIONALITY
+===============================================*/
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("searchInput");
+    const searchBtn = document.getElementById("searchBtn");
+
+    if (searchInput) {
+        if (searchBtn) {
+            searchBtn.addEventListener("click", performSearch);
+        }
+        searchInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                performSearch();
+            }
+        });
+        searchInput.addEventListener("input", (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            filterProducts(query);
+        });
+    }
+
+    function performSearch() {
+        const searchInput = document.getElementById("searchInput");
+        if (!searchInput) return;
+        const query = searchInput.value.toLowerCase().trim();
+        if (query) {
+            filterProducts(query);
+            const firstVisible = document.querySelector('.card:not([style*="display: none"])');
+            if (firstVisible) {
+                firstVisible.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+        } else {
+            document.querySelectorAll('.card').forEach(card => {
+                card.style.display = '';
+            });
+        }
+    }
+
+    function filterProducts(query) {
+        const cards = document.querySelectorAll('.card');
+        let hasResults = false;
+        cards.forEach(card => {
+            const name = card.dataset.name?.toLowerCase() || '';
+            if (name.includes(query)) {
+                card.style.display = '';
+                hasResults = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        let noResultsMsg = document.getElementById('noResultsMsg');
+        if (!hasResults && query) {
+            if (!noResultsMsg) {
+                noResultsMsg = document.createElement('div');
+                noResultsMsg.id = 'noResultsMsg';
+                noResultsMsg.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #666;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1" style="margin-bottom: 15px;">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <p>No products found matching "${query}"</p>
+                        <a href="products.html" class="btn" style="display: inline-block; margin-top: 15px; background: #1a237e; color: white; padding: 10px 20px; text-decoration: none; border-radius: 8px;">View All Products</a>
+                    </div>
+                `;
+                const grid = document.querySelector('.section .grid');
+                if (grid) grid.appendChild(noResultsMsg);
+            } else {
+                noResultsMsg.style.display = 'block';
+            }
+        } else if (noResultsMsg) {
+            noResultsMsg.style.display = 'none';
+        }
+    }
 });

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Policy - Crucial Online Sales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.jpg" alt="Logo">
+        <h1>CRUCIAL ONLINE SALES</h1>
+        <div class="profile-container">
+            <a href="settings.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" class="profile-icon">
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about us.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="contact us.html">Contact Us</a>
+        </div>
+        <div id="cartIconContainer" class="cart-icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span id="cartBadge">0</span>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="page-header">
+        <h1>Delivery Policy</h1>
+        <p>Fast, reliable delivery across Kenya</p>
+    </div>
+
+    <div class="container">
+        <div class="info-section">
+            <h2>Delivery Options</h2>
+            <p>We offer multiple delivery options to suit your needs:</p>
+
+            <h3>Standard Delivery (2-5 Business Days)</h3>
+            <ul>
+                <li>Within Nairobi: KSH 300</li>
+                <li>Outside Nairobi (Major towns): KSH 500</li>
+                <li>Remote areas: KSH 700</li>
+            </ul>
+
+            <h3>Express Delivery (Same Day / Next Day)</h3>
+            <ul>
+                <li>Nairobi only: KSH 600</li>
+                <li>Orders placed before 12 PM eligible for same-day delivery</li>
+            </ul>
+
+            <h3>Free Delivery</h3>
+            <ul>
+                <li>Orders above KSH 10,000 qualify for free standard delivery</li>
+                <li>Free delivery applies to Nairobi and major towns only</li>
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h2>Delivery Process</h2>
+
+            <h3>Order Processing</h3>
+            <p>All orders are processed within 24 hours of payment confirmation. You will receive an SMS and email
+                confirmation once your order is dispatched.</p>
+
+            <h3>Tracking Your Order</h3>
+            <p>Once your order is shipped, you will receive a tracking number via SMS. You can use this to track your
+                delivery status on our website or contact our customer service.</p>
+
+            <h3>Delivery Partners</h3>
+            <p>We partner with trusted courier services including:</p>
+            <ul>
+                <li>G4S Kenya</li>
+                <li>Speedaf Express</li>
+                <li>Bolt Business (for express deliveries)</li>
+                <li>In-house delivery team (Nairobi area)</li>
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h2>Important Information</h2>
+
+            <h3>Delivery Address</h3>
+            <p>Please ensure your delivery address is accurate and complete. Include:</p>
+            <ul>
+                <li>County</li>
+                <li>Town/City</li>
+                <li>Street name and building number</li>
+                <li>Landmark (if applicable)</li>
+                <li>Contact phone number</li>
+            </ul>
+
+            <h3>Failed Delivery Attempts</h3>
+            <p>If delivery fails due to incorrect address or unavailability, we will:</p>
+            <ul>
+                <li>Contact you to reschedule delivery</li>
+                <li>Hold your package for up to 7 days</li>
+                <li>Return to sender after 7 days (redelivery fees apply)</li>
+            </ul>
+
+            <h3>Inspection Upon Delivery</h3>
+            <p>We encourage all customers to inspect their packages before accepting delivery. Report any damage
+                immediately to the delivery personnel.</p>
+        </div>
+
+        <div class="info-section">
+            <h2>Contact Us</h2>
+            <p>For delivery inquiries or special arrangements:</p>
+            <ul>
+                <li>Phone: +254 700 123 456</li>
+                <li>Email: delivery@crucialonlinesales.co.ke</li>
+                <li>Working Hours: Monday - Saturday, 8:00 AM - 6:00 PM</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 crucial online sales website. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Cart Modal -->
+    <div id="cartModalOverlay" class="cart-modal-overlay">
+        <div class="cart-modal">
+            <div class="cart-modal-header">
+                <h2>Your Cart</h2>
+                <button id="closeCartModal" class="close-btn">&times;</button>
+            </div>
+            <div id="cartModalContent" class="cart-modal-content"></div>
+            <div class="cart-modal-footer">
+                <div class="total-section">
+                    <strong>Total:</strong> <span id="cartModalTotal">KSH 0</span>
+                </div>
+                <a href="checkout.html" id="checkoutBtn" class="btn">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
