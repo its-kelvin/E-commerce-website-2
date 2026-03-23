@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header (Same as Index) -->
+<header>
+    <img src="images/logo.jpg" alt="Logo">
+    <h1>CRUCIAL ONLINE SALES</h1>
+    <div class="profile-container">
+        <a href="settings.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" class="profile-icon">
+        </a>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about us.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="contact us.html">Contact Us</a>
+    <div id="cartIconContainer" class="cart-icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <span id="cartBadge">0</span>
+    </div>
+</nav>
+
+<div class="checkout-wrapper">
+    <!-- LEFT: Cart Items -->
+    <div class="cart-section">
+        <h2>Your Shopping Cart</h2>
+        <div class="cart-table-container">
+            <table id="fullCartTable">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                    <!-- Items injected by JS -->
+                </tbody>
+            </table>
+        </div>
+        <div class="cart-summary">
+            <h3>Total Cost: <span id="grandTotalDisplay">KSH 0</span></h3>
+        </div>
+    </div>
+
+    <!-- RIGHT: Checkout Form -->
+    <div class="checkout-form-section">
+        <h2>Pay Now / Checkout</h2>
+        <form id="checkoutForm">
+            
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="name" placeholder="Enter Full Name">
+                    <p class="error" id="nameError"></p>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="text" id="phone" placeholder="07...">
+                    <p class="error" id="phoneError"></p>
+                </div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="text" id="email" placeholder="example@email.com">
+                    <p class="error" id="emailError"></p>
+                </div>
+
+                <div class="input-group">
+                    <label for="county">County</label>
+                    <select id="county">
+                        <option value="">Select County</option>
+                        <option value="Mombasa">001 - Mombasa</option>
+                        <option value="Kwale">002 - Kwale</option>
+                        <option value="Kilifi">003 - Kilifi</option>
+                        <option value="Tana River">004 - Tana River</option>
+                        <option value="Lamu">005 - Lamu</option>
+                        <option value="Taita Taveta">006 - Taita Taveta</option>
+                        <option value="Garissa">007 - Garissa</option>
+                        <option value="Wajir">008 - Wajir</option>
+                        <option value="Mandera">009 - Mandera</option>
+                        <option value="Marsabit">010 - Marsabit</option>
+                        <option value="Isiolo">011 - Isiolo</option>
+                        <option value="Meru">012 - Meru</option>
+                        <option value="Tharaka-Nithi">013 - Tharaka-Nithi</option>
+                        <option value="Embu">014 - Embu</option>
+                        <option value="Kitui">015 - Kitui</option>
+                        <option value="Machakos">016 - Machakos</option>
+                        <option value="Makueni">017 - Makueni</option>
+                        <option value="Nyandarua">018 - Nyandarua</option>
+                        <option value="Nyeri">019 - Nyeri</option>
+                        <option value="Kirinyaga">020 - Kirinyaga</option>
+                        <option value="Murang'a">021 - Murang'a</option>
+                        <option value="Kiambu">022 - Kiambu</option>
+                        <option value="Turkana">023 - Turkana</option>
+                        <option value="West Pokot">024 - West Pokot</option>
+                        <option value="Samburu">025 - Samburu</option>
+                        <option value="Trans Nzoia">026 - Trans Nzoia</option>
+                        <option value="Uasin Gishu">027 - Uasin Gishu</option>
+                        <option value="Elgeyo-Marakwet">028 - Elgeyo-Marakwet</option>
+                        <option value="Nandi">029 - Nandi</option>
+                        <option value="Baringo">030 - Baringo</option>
+                        <option value="Laikipia">031 - Laikipia</option>
+                        <option value="Nakuru">032 - Nakuru</option>
+                        <option value="Narok">033 - Narok</option>
+                        <option value="Kajiado">034 - Kajiado</option>
+                        <option value="Kericho">035 - Kericho</option>
+                        <option value="Bomet">036 - Bomet</option>
+                        <option value="Kakamega">037 - Kakamega</option>
+                        <option value="Vihiga">038 - Vihiga</option>
+                        <option value="Bungoma">039 - Bungoma</option>
+                        <option value="Busia">040 - Busia</option>
+                        <option value="Siaya">041 - Siaya</option>
+                        <option value="Kisumu">042 - Kisumu</option>
+                        <option value="Homa Bay">043 - Homa Bay</option>
+                        <option value="Migori">044 - Migori</option>
+                        <option value="Kisii">045 - Kisii</option>
+                        <option value="Nyamira">046 - Nyamira</option>
+                        <option value="Nairobi">047 - Nairobi</option>
+                    </select>
+                    <p class="error" id="countyError"></p>
+                </div>
+
+                <div class="input-group">
+                    <label>Town</label>
+                    <input type="text" id="town" placeholder="e.g., Westlands">
+                    <p class="error" id="townError"></p>
+                </div>
+
+                <div class="input-group">
+                    <label>Street Address</label>
+                    <input type="text" id="street" placeholder="e.g., Mpaka Road, Building A">
+                    <p class="error" id="streetError"></p>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Total Amount to Pay</label>
+                    <input type="number" id="totalAmount" readonly style="background:#e9ecef; font-weight:bold;">
+                </div>
+            </div>
+
+            <button type="button" class="btn" onclick="submitForm()">PAY NOW</button>
+        </form>
+    </div>
+</div>
+
+<!-- Cart Modal (Hidden by default, used for quick view from other pages) -->
+<div id="cartModalOverlay" class="cart-modal-overlay">
+    <div class="cart-modal">
+        <div class="cart-modal-header">
+            <h2>Your Cart</h2>
+            <button id="closeCartModal" class="close-btn">&times;</button>
+        </div>
+        <div id="cartModalContent" class="cart-modal-content"></div>
+        <div class="cart-modal-footer">
+            <div class="total-section">
+                <strong>Total:</strong> <span id="cartModalTotal">KSH 0</span>
+            </div>
+            <!-- On checkout page, this button is redundant, but kept for global logic -->
+            <a href="checkout.html" id="checkoutBtn" class="btn">Proceed to Checkout</a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    &copy; 2025 Crucial Online Sales Website. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

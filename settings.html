@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings - Crucial Online Sales</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    /* Internal Settings Styles */
+    body { background-color: #f8f9fa; }
+    .page-header { background: #1a237e; color: white; padding: 60px 20px 80px; text-align: center; }
+    .page-header h1 { margin: 0; font-size: 2.5rem; }
+    .page-header p { opacity: 0.8; margin-top: 10px; }
+    
+    .settings-container { 
+        max-width: 1000px; 
+        margin: -50px auto 50px; 
+        padding: 0 20px; 
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 20px; 
+        justify-content: center;
+    }
+    
+    .settings-card {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    .settings-card h2 { color: #1a237e; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.2rem; }
+    .settings-card h3 { font-size: 1rem; color: #555; margin-bottom: 15px; }
+    
+    form label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; font-size: 0.9rem; }
+    form input { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+    form input[readonly] { background-color: #e9ecef; cursor: not-allowed; }
+    
+    .btn { background: #ff8f00; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; width: 100%; font-size: 1rem; font-weight: bold; transition: background 0.3s; }
+    .btn:hover { background: #ff6f00; }
+
+    /* Profile Pic Upload Styles */
+    .profile-upload-section { display: flex; flex-direction: column; align-items: center; margin-bottom: 20px; }
+    .settings-profile-pic { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #eee; margin-bottom: 10px; }
+    .file-upload-wrapper { position: relative; overflow: hidden; display: inline-block; }
+    .file-upload-wrapper input[type=file] { font-size: 100px; position: absolute; left: 0; top: 0; opacity: 0; cursor: pointer; }
+    .btn-small { width: auto; padding: 5px 15px; font-size: 0.8rem; background: #555; }
+    .btn-small:hover { background: #333; }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .settings-container { flex-direction: column; margin-top: -30px; }
+        .settings-card { width: 100%; box-sizing: border-box; }
+        .page-header { padding: 40px 15px 60px; }
+    }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <img src="images/logo.jpg" alt="Logo">
+    <h1>CRUCIAL ONLINE SALES</h1>
+    <div class="profile-container">
+        <a href="settings.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" class="profile-icon">
+        </a>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about us.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="contact us.html">Contact Us</a>
+    <div id="cartIconContainer" class="cart-icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <span id="cartBadge">0</span>
+    </div>
+</nav>
+
+<div class="page-header">
+    <h1>Account Settings</h1>
+    <p>Manage your profile, security, and preferences</p>
+</div>
+
+<div class="settings-container">
+    <!-- Profile Settings -->
+    <div class="settings-card">
+        <h2>Profile Details</h2>
+        
+        <div class="profile-upload-section">
+            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" id="settingsProfilePic" class="settings-profile-pic" alt="Profile">
+            <div class="file-upload-wrapper">
+                <button class="btn btn-small" type="button">Change Photo</button>
+                <input type="file" id="profileUpload" accept="image/*">
+            </div>
+        </div>
+
+        <form id="profileForm">
+            <label>First Name</label>
+            <input type="text" id="settingsFname" placeholder="First Name">
+            
+            <label>Last Name</label>
+            <input type="text" id="settingsLname" placeholder="Last Name">
+            
+            <label>Phone Number</label>
+            <input type="text" id="settingsPhone" placeholder="07...">
+            
+            <label>County</label>
+            <input type="text" id="settingsCounty" placeholder="Your County">
+            
+            <button type="button" class="btn" onclick="saveProfileSettings()">Save Profile</button>
+        </form>
+    </div>
+
+    <!-- Account / Security Settings -->
+    <div class="settings-card">
+        <h2>Account Security</h2>
+        
+        <h3>Change Email</h3>
+        <form id="emailForm">
+            <label>Current Email</label>
+            <input type="email" id="currentEmail" readonly style="background:#e9ecef;">
+            
+            <label>New Email</label>
+            <input type="email" id="newEmail" placeholder="Enter new email">
+            
+            <button type="button" class="btn" onclick="changeEmail()">Update Email</button>
+        </form>
+
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+
+        <h3>Change Password</h3>
+        <form id="passwordForm">
+            <label>Current Password</label>
+            <input type="password" id="currentPassword" placeholder="Current Password">
+            
+            <label>New Password</label>
+            <input type="password" id="newPassword" placeholder="New Password">
+            
+            <label>Confirm New Password</label>
+            <input type="password" id="confirmNewPassword" placeholder="Confirm New Password">
+            
+            <button type="button" class="btn" onclick="changePassword()">Update Password</button>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    &copy; 2025 Crucial Online Sales Website. All rights reserved.
+</footer>
+
+<!-- Cart Modal -->
+<div id="cartModalOverlay" class="cart-modal-overlay">
+    <div class="cart-modal">
+        <div class="cart-modal-header">
+            <h2>Your Cart</h2>
+            <button id="closeCartModal" class="close-btn">&times;</button>
+        </div>
+        <div id="cartModalContent" class="cart-modal-content"></div>
+        <div class="cart-modal-footer">
+            <div class="total-section">
+                <strong>Total:</strong> <span id="cartModalTotal">KSH 0</span>
+            </div>
+            <a href="checkout.html" id="checkoutBtn" class="btn">Proceed to Checkout</a>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
